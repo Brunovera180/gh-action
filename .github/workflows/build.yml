@@ -20,3 +20,5 @@ jobs:
           context: .
           file: ./Dockerfile
       - run: docker images
+      - run: docker build -t buil-test .
+      - run: docker images 
