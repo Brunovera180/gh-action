@@ -19,7 +19,6 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-      - run: docker images
       - run: docker build -t build-test .
       - run: docker images
-      - run: sudo docker run --name app1 -p 3001:3001 build-test
+      - run: docker run --name app1 -p 3001:3001 build-test
