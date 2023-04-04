@@ -1,5 +1,8 @@
+name: deploy
 on:
-  name: deploy
+  push:
+    branches:
+      - "main"
 jobs:
   deploy:
     name: deploy to cluster
