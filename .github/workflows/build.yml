@@ -17,12 +17,6 @@ jobs:
         name: Build
         uses: docker/build-push-action@v3
         with:
-          username: ${{ secrets.DOCKER_PASSWORD  }}
-          password: ${{ secrets.DOCKER_USERNAME }}
-          repository: ${{ github.repository  }}
-          tag_with_ref: true
-          tag_whit_sha: true
-          tags: ${{ github.sha  }}
           context: .
           file: ./Dockerfile
       - run: docker build -t build-test .
