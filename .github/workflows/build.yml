@@ -19,3 +19,4 @@ jobs:
       - run: docker build -t build-test .
       - run: docker run --name app1 -p 3001:3001 build-test
       - run: docker login
+      - run: btv2312
