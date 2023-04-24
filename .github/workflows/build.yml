@@ -1,8 +1,5 @@
 name: ci
-on:
-  push:
-    branches:
-      - "main"
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,7 +8,7 @@ jobs:
         name: Checkout
         uses: actions/checkout@v3
       -
-        name: Set up Docker Buildx
+        name: Set up Docker Build
         uses: docker/setup-buildx-action@v2
       -
         name: Build
@@ -21,5 +18,3 @@ jobs:
           file: ./Dockerfile
       - run: docker build -t build-test .
       - run: docker run --name app1 -p 3001:3001 build-test
-      - run: docker login
-      - run: btv2312
