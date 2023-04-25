@@ -1,6 +1,6 @@
-on: [push]
-
 name: deploy-image-to-ecr
+
+on: [push]
 
 jobs:
   deploy:
