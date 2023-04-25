@@ -1,5 +1,5 @@
 name: deploy-image-to-ecr
-
+run-name: deploy-img
 on: [push]
 
 jobs:
