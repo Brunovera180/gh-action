@@ -1,3 +1,1 @@
-# gh-action
-
-By: bruno
+gh-action
